@@ -10,7 +10,8 @@ const Input = styled.input<{ hasError?: boolean; hasBorder?: boolean }>`
       ${hasError ? theme.colors.danger : theme.colors.border};
       border - radius: 5px;
       `;
-    } else {
+    }
+    else {
       return css`
         border: none;
       `;
