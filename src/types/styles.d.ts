@@ -57,7 +57,7 @@ export type CSSPropertyAlignContent =
   | 'baseline'
   | 'normal'
 
-export type PropertyJustifyItems =
+export type CSSPropertyJustifyItems =
   | CSSPropertyGlobals
   | SelfPosition
   | 'baseline'
@@ -82,7 +82,7 @@ export type CSSPropertyFlexWrap =
   | 'wrap'
   | 'wrap-reverse'
 
-export type CSSSPropertyFlexDirection =
+export type CSSPropertyFlexDirection =
   | CSSPropertyGlobals
   | 'column'
   | 'column-reverse'
