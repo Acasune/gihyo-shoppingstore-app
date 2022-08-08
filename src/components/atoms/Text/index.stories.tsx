@@ -1,4 +1,4 @@
-﻿import { ComponentMeta, ComponentStory } from "@storybook/react";
+﻿import { ComponentMeta, ComponentStory } from '@storybook/react'
 import Text from './index'
 
 export default {
@@ -19,7 +19,6 @@ export default {
       table: {
         type: {
           summary: 'extraSmall, small, medium, mediumLarge, large, extraLarge',
-
         },
         defaultValue: { summary: 'medium' },
       },
@@ -49,7 +48,7 @@ export default {
       control: { type: 'color' },
       description: 'テキストの色',
       table: {
-        type: { summary: 'string' }
+        type: { summary: 'string' },
       },
     },
     backgroundColor: {
@@ -77,7 +76,7 @@ export default {
       control: { type: 'number' },
       description: 'マージンライト',
       table: {
-        type: { summary: 'number' }
+        type: { summary: 'number' },
       },
     },
     mb: {
@@ -92,42 +91,42 @@ export default {
       description: 'マージンレフト',
       table: {
         type: { summary: 'number' },
-      }
+      },
     },
     p: {
       control: { type: 'number' },
       description: 'パディング',
       table: {
-        type: { summary: 'number' }
-      }
+        type: { summary: 'number' },
+      },
     },
     pt: {
       control: { type: 'number' },
       description: 'パディングトップ',
       table: {
         type: { summary: 'number' },
-      }
+      },
     },
     pr: {
       control: { type: 'number' },
       description: 'パディングライト',
       table: {
         type: { summary: 'number' },
-      }
+      },
     },
     pb: {
       control: { type: 'number' },
       description: 'パディングボトム',
       table: {
         type: { summary: 'number' },
-      }
+      },
     },
     pl: {
       control: { type: 'number' },
       description: 'パディングレフト',
       table: {
         type: { summary: 'number' },
-      }
+      },
     },
   },
 } as ComponentMeta<typeof Text>

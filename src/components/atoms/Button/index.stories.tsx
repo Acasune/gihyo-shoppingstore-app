@@ -28,7 +28,7 @@ export default {
       description: 'Disabledのフラグ',
       table: {
         type: { summary: 'boolean' },
-      }
+      },
     },
     width: {
       control: { type: 'number' },
