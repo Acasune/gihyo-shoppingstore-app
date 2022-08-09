@@ -11,12 +11,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
-    "lint-staged": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx}": [
-      "next lint --fix --dir src"
-    ]
+    "pre-commit": "next lint --fix"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -67,7 +62,6 @@
     "husky": "^8.0.1",
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
-    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
     "typescript": "^4.7.4",
