@@ -1,7 +1,7 @@
 ﻿import styled from 'styled-components'
 import { CloseIcon } from 'components/atoms/IconButton'
-import Flex from 'components/layout/Flex'
 import Box from 'components/layout/Box'
+import Flex from 'components/layout/Flex'
 
 const ImagePreviewContainer = styled(Box)`
   position: relative;
