@@ -186,6 +186,7 @@ const Dropdown = (props: DropdownProps) => {
         hasError={hasError}
         onMouseDown={handleMouseDown}
         onTouchEnd={handleMouseDown}
+        data-testid="dropdown-control"
       >
         {selectedItem && (
           <DropdownValue>
@@ -213,6 +214,7 @@ const Dropdown = (props: DropdownProps) => {
               key={idx}
               onMouseDown={(e) => handleSelectValue(e, item)}
               onClick={(e) => handleSelectValue(e, item)}
+              data-testid="dropdown-option"
             >
               <DropdownItem item={item} />
             </DropdownOption>
