@@ -1,21 +1,21 @@
 ﻿// 商品カテゴリ
-export type Categori = 'shoes' | 'clothes' | 'book'
+export type Category = 'shoes' | 'clothes' | 'book'
 // 商品の状態
 export type Condition = 'new' | 'used'
 
 // ユーザー
 export type User = {
   id: number
-  username: stirng
+  username: string
   displayName: string
   email: string
-  prifileImageUrl: string
+  profileImageUrl: string
   description: string
 }
 
 export type Product = {
   id: number
-  categori: Category
+  category: Category
   title: string
   description: string
   imageUrl: string

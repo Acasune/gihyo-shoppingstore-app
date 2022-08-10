@@ -9,14 +9,14 @@ export type AppTheme = typeof theme
 type SpaceThemeKeys = keyof typeof theme.space
 type ColorThemeKeys = keyof typeof theme.colors
 type FontSizeThemeKeys = keyof typeof theme.fontSizes
-type LetterSpacingTHemeKeys = keyof typeof theme.letterSpacings
+type LetterSpacingThemeKeys = keyof typeof theme.letterSpacings
 type LineHeightThemeKeys = keyof typeof theme.lineHeights
 
 // types of each theme
 export type Space = SpaceThemeKeys | (string & {})
 export type Color = ColorThemeKeys | (string & {})
 export type FontSize = FontSizeThemeKeys | (string & {})
-export type LetterSpacing = LetterSpacingTHemeKeys | (string & {})
+export type LetterSpacing = LetterSpacingThemeKeys | (string & {})
 export type LineHeight = LineHeightThemeKeys | (string & {})
 
 // breakpoints
@@ -24,14 +24,14 @@ const BREAKPOINTS: { [key: string]: string } = {
   sm: '640px',
   md: '768px',
   lg: '1024px',
-  xl: '1028px',
+  xl: '1280px',
 }
 
 /**
  * Responsive型をCSSプロパティとその値に変換
  * @param propKey CSSプロパティ
  * @param prop Responsive型
- * @param theme AppTHeme
+ * @param theme AppTheme
  * @returns CSSプロパティとその値 (ex. background-color: white;)
  */
 export function toPropValue<T>(
@@ -69,22 +69,22 @@ export function toPropValue<T>(
     }
     return result.join('\n')
   }
+
   return `${propKey}: ${toThemeValueIfNeeded(propKey, prop, theme)};`
 }
 
 const SPACE_KEYS = new Set([
   'margin',
   'margin-top',
+  'margin-left',
   'margin-bottom',
   'margin-right',
   'padding',
   'padding-top',
   'padding-left',
-  'padding-left',
   'padding-bottom',
   'padding-right',
 ])
-
 const COLOR_KEYS = new Set(['color', 'background-color'])
 const FONT_SIZE_KEYS = new Set(['font-size'])
 const LINE_SPACING_KEYS = new Set(['letter-spacing'])
@@ -109,7 +109,7 @@ function toThemeValueIfNeeded<T>(propKey: string, value: T, theme?: AppTheme) {
     theme &&
     theme.colors &&
     COLOR_KEYS.has(propKey) &&
-    isColorTHemeKeys(value, theme)
+    isColorThemeKeys(value, theme)
   ) {
     return theme.colors[value]
   } else if (
@@ -134,6 +134,7 @@ function toThemeValueIfNeeded<T>(propKey: string, value: T, theme?: AppTheme) {
   ) {
     return theme.lineHeights[value]
   }
+
   return value
 }
 
@@ -152,7 +153,7 @@ function isSpaceThemeKeys(prop: any, theme: AppTheme): prop is SpaceThemeKeys {
   return Object.keys(theme.space).filter((key) => key == prop).length > 0
 }
 
-function isColorTHemeKeys(prop: any, theme: AppTheme): prop is ColorThemeKeys {
+function isColorThemeKeys(prop: any, theme: AppTheme): prop is ColorThemeKeys {
   return Object.keys(theme.colors).filter((key) => key == prop).length > 0
 }
 
@@ -166,7 +167,7 @@ function isFontSizeThemeKeys(
 function isLetterSpacingThemeKeys(
   prop: any,
   theme: AppTheme,
-): prop is LetterSpacingTHemeKeys {
+): prop is LetterSpacingThemeKeys {
   return (
     Object.keys(theme.letterSpacings).filter((key) => key == prop).length > 0
   )
