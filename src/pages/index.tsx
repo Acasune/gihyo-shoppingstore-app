@@ -60,7 +60,7 @@ const HomePage: NextPage<HomePageProps> = ({
               Gihyo
               C2Cは実践的なNext.jsアプリケーション開発で使われるデモアプリです。モックサーバーを使用しています。
               ソースコードは
-              <text
+              <Text
                 as="a"
                 style={{ textDecoration: 'underline' }}
                 target="_blank"
@@ -69,7 +69,7 @@ const HomePage: NextPage<HomePageProps> = ({
                 color="white"
               >
                 こちら
-              </text>
+              </Text>
               のGitHubからダウンロードできます。
             </Text>
             <Text as="p" color="white" variant="mediumLarge">
